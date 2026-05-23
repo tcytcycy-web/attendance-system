@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiServe - IT Solutions</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        :root {
+    --primary-pink: #ff85a2;
+    --hover-pink: #f06292;
+    --light-bg: #fff0f3;
+    --dark-nav: #2d2325;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-bg);
+    background-image: radial-gradient(var(--primary-pink) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    background-opacity: 0.1;
+    font-family: 'Inter', sans-serif;
+    color: #4a4a4a;
+}
+
+.btn-lg {
+    padding: 12px 35px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+}
+
+        nav {
+            background: var(--dark-nav);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-buttons button {
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .nav-buttons button:hover {
+            opacity: 0.8;
+            transform: translateY(-1px);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://picsum.photos/1200/600') center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        #about { 
+            display: none; 
+            min-height: 80vh;
+        }
+
+        .card-custom {
+            transition: transform 0.3s ease;
+            border: none;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+        }
+
+        .test-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 30px;
+        }
+
+        .testimonial-card img {
+    border: 3px solid #fff; 
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover img {
+    transform: scale(1.1);
+}
+
+.testimonial-author {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <span style="font-size:26px; font-weight:bold; letter-spacing: 1px;">DIGI<span style="color:var(--primary-pink)">SERVE</span></span>
+    <div class="nav-buttons">
+        <button onclick="showPage('home')" class="btn btn-outline-light btn-sm">Home</button>
+        <button onclick="showPage('about')" class="btn btn-primary btn-sm">About</button>
+    </div>
+</nav>
+
+<div id="home" class="page-content">
+    <div class="hero">
+        <div class="text-center">
+            <h1 class="display-3 fw-bold">Innovative Solutions</h1>
+            <p class="lead">Empowering your business with cutting-edge technology.</p>
+        </div>
+    </div>
+
+    <div class="container content-section text-center">
+        <h2 class="mb-5">Our Expertise</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-custom p-3">
+                    <img src="https://picsum.photos/id/1/500/300" class="img-fluid rounded" alt="Web Design">
+                    <h5 class="mt-3">Web Design</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-custom p-3">
+                    <img src="https://picsum.photos/id/2/500/300" class="img-fluid rounded" alt="App Dev">
+                    <h5 class="mt-3">App Development</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-custom p-3">
+                    <img src="https://picsum.photos/id/3/500/300" class="img-fluid rounded" alt="Cloud">
+                    <h5 class="mt-3">Cloud Solutions</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 py-5">
+    <div class="row g-5">
+        <div class="col-md-4">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+                <div class="feature-icon">🚀</div>
+                <h4>Fast Delivery</h4>
+                <p class="text-muted">We ensure your digital products are launched on time with top quality.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+                <div class="feature-icon">🛡️</div>
+                <h4>Secure Code</h4>
+                <p class="text-muted">Security is our priority. We build robust and safe applications.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 bg-white rounded shadow-sm h-100">
+                <div class="feature-icon">💎</div>
+                <h4>Premium UI/UX</h4>
+                <p class="text-muted">Beautiful and intuitive designs that your users will love.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="test-box mt-5">
+            <p id="text" class="fw-bold text-primary">Testing jQuery Functionality...</p>
+            <button id="hideBtn" class="btn btn-outline-secondary btn-sm">Hide Text</button>
+            <button id="showBtn" class="btn btn-outline-primary btn-sm">Show Text</button>
+        </div>
+
+        <button onclick="showPage('about')" class="btn btn-primary btn-lg mt-5 px-5">Get Started</button>
+    </div>
+</div>
+
+<div id="about" class="page-content">
+    <div class="container content-section">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h1 class="mb-4">About DigiServe</h1>
+                <p class="text-muted mb-5">We are a team of dedicated professionals committed to delivering high-quality digital experiences.</p>
+
+                <div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-6 col-md-3">
+            <h2 class="fw-bold text-primary counter">150+</h2>
+            <p class="text-muted">Projects Finished</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <h2 class="fw-bold text-primary counter">80+</h2>
+            <p class="text-muted">Happy Clients</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <h2 class="fw-bold text-primary counter">15+</h2>
+            <p class="text-muted">Awards Won</p>
+        </div>
+        <div class="col-6 col-md-3">
+            <h2 class="fw-bold text-primary counter">24/7</h2>
+            <p class="text-muted">Support</p>
+        </div>
+    </div>
+</div>
+
+                <hr class="my-5">
+
+<div class="container pb-5">
+    <h2 class="text-center mb-5">What Our Clients Say</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="testimonial-card text-center">
+                <img src="https://picsum.photos/id/64/100/100" class="rounded-circle mb-3 shadow-sm" alt="Client 1" style="width: 80px; height: 80px; object-fit: cover;">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"DigiServe transformed our business website. Their attention to detail and modern design is unmatched!"</p>
+                <p class="testimonial-author">- Alex Johnson</p>
+                <small class="text-muted">Tech Solutions CEO</small>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="testimonial-card text-center">
+                <img src="https://picsum.photos/id/1027/100/100" class="rounded-circle mb-3 shadow-sm" alt="Client 2" style="width: 80px; height: 80px; object-fit: cover;">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The mobile app they developed is fast and user-friendly. Highly recommend their IT solutions."</p>
+                <p class="testimonial-author">- Sarah Chen</p>
+                <small class="text-muted">Creative Director</small>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="testimonial-card text-center">
+                <img src="https://picsum.photos/id/91/100/100" class="rounded-circle mb-3 shadow-sm" alt="Client 3" style="width: 80px; height: 80px; object-fit: cover;">
+                <div class="stars">★★★★☆</div>
+                <p class="testimonial-text">"Great support and cloud services. They helped us migrate our data smoothly without any downtime."</p>
+                <p class="testimonial-author">- Michael Brown</p>
+                <small class="text-muted">IT Manager</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                
+                <div class="card p-4 shadow-sm">
+                    <h4 class="mb-3">Contact Us</h4>
+                    <form onsubmit="return validateForm()">
+                        <div class="mb-3 text-start">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 py-2">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+function showPage(pageId) {
+    $(".page-content").hide();
+    $("#" + pageId).fadeIn(400);
+    window.scrollTo(0,0);
+}
+
+function validateForm() {
+    const name = $("#name").val().trim();
+    const email = $("#email").val().trim();
+    
+    if(!name || !email) {
+        alert("⚠️ Please complete all fields.");
+        return false;
+    }
+    alert("✅ Thank you, " + name + "! Your message has been sent.");
+    return true;
+}
+
+$(document).ready(function(){
+
+    $("#hideBtn").click(function(){
+        $("#text").animate({opacity: 0}, 300);
+    });
+    
+    $("#showBtn").click(function(){
+        $("#text").animate({opacity: 1}, 300);
+    });
+});
+</script>
+
+<footer style="background: #222; color: #888; padding: 40px 0; margin-top: 50px;">
+    <div class="container text-center">
+        <h4 style="color: white; margin-bottom: 20px;">DigiServe</h4>
+        <p>Providing the best digital solutions for your future.</p>
+        <div class="mt-3">
+            <a href="#" style="color: #00d4ff; margin: 0 10px; text-decoration: none;">Facebook</a>
+            <a href="#" style="color: #00d4ff; margin: 0 10px; text-decoration: none;">Instagram</a>
+            <a href="#" style="color: #00d4ff; margin: 0 10px; text-decoration: none;">LinkedIn</a>
+        </div>
+        <hr style="border-color: #444; margin: 30px 0;">
+        <p style="font-size: 14px;">&copy; 2026 DigiServe. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
